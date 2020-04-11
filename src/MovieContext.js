@@ -4,7 +4,7 @@ import React, { useState, createContext } from 'react';
 export const MovieContext = createContext();
 
 export const MovieProvider = (props) => {
-    const [movies, setMovies] = useState([
+    const [movies, setMovies] = useState([ // the next bit is the initial value for the state
         {
             name: 'Harry Potter',
             price: '£10',
@@ -24,9 +24,11 @@ export const MovieProvider = (props) => {
 
     return (
         // Whatever is wrapped inside the Context.Provider is fed the state above by the MovieProvider
-        <MovieContext.Provider value={[movies, setMovies]}>
-            {/* props.children will render any children of the props we send into the component */}
+        // The Provider is what allows consuming components to subscribe to context changes. It is the provider that allows the context to be consumed by other components.
+
+        <MovieContext.Provider value={[movies, setMovies]}>  {/* value is the data we make available to consuming components */}
             {props.children}
+            {/* props.children will render any children of the props we send into the component */}
         </MovieContext.Provider>
     );
 }

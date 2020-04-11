@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext } from 'react';      // Allows this component to consume the value from the provider
 import Movie from './Movie';
 import { MovieContext } from './MovieContext';
 
@@ -10,11 +10,7 @@ const MovieList = () => {
             <h1>{movies.map(movie => (
                 <Movie name={movie.name} price={movie.price} key={movie.id} />
             ))}</h1>
-            {/* {movies.map(movie => (
-                <Movie name={movie.name} price={movie.price} key={movie.id} />
-            ))} */}
         </div>
-
     );
 }
 
