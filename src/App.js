@@ -1,7 +1,7 @@
 import React from 'react';
 import MovieList from './MovieList';
 import Nav from './Nav';
-import { MovieProvider } from './MovieContext';
+import { MovieProvider } from './MovieContext';  // Import the correct provider to use
 
 function App() {
   return (
