@@ -4,7 +4,7 @@ import { MovieContext } from './MovieContext';
 const AddMovie = () => {
     const [name, setName] = useState('');
     const [price, setPrice] = useState('');
-    const [movies, setMovies] = useContext(MovieContext);
+    const [movies, setMovies] = useContext(MovieContext);  //Allows us to get the movies from context
 
     const updateName = (e) => {
         setName(e.target.value);
@@ -14,7 +14,9 @@ const AddMovie = () => {
     };
     const AddMovie = e => {
         e.preventDefault();
-        setMovies(prevMovies => [...prevMovies, { name: name, price: price, id: prevMovies.length + 1 }]);
+
+        //Take current movies and add a new one to the array
+        setMovies(movies => [...movies, { name: name, price: price, id: movies.length + 1 }]);
     };
 
     return (
