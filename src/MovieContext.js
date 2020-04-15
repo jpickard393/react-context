@@ -8,17 +8,17 @@ export const MovieProvider = (props) => {
         {
             name: 'Harry Potter',
             price: '£10',
-            id: 1234
+            id: '1'
         },
         {
             name: 'Game of thrones',
             price: '£20',
-            id: 1235
+            id: '2'
         },
         {
             name: 'Inception',
             price: '£21',
-            id: 1236
+            id: '3'
         }
     ]);
 

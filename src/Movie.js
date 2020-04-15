@@ -6,7 +6,7 @@ const Movie = ({ name, price, id }) => {
         <div>
             <h3>{name}</h3>
             <p>{price}</p>
-            <p>Id:{id}</p>
+            <p>{id}</p>
         </div>
 
     );
